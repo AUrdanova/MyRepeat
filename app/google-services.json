@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "606037430177",
+    "project_id": "myrepeat29",
+    "storage_bucket": "myrepeat29.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:606037430177:android:0fb04362153ddb8f60c5e0",
+        "android_client_info": {
+          "package_name": "io.geektech.myrepeat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "606037430177-7oc1a9pmfflj4dcteb3h20v7n1ch68v3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjkQG0OMKm9GHhz_Kh0YW41wW9qgqr0To"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "606037430177-7oc1a9pmfflj4dcteb3h20v7n1ch68v3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
