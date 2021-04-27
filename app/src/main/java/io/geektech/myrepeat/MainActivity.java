@@ -1,6 +1,8 @@
 package io.geektech.myrepeat;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -9,6 +11,9 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+
+import java.util.ArrayList;
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
     private NavController navController;
@@ -28,6 +33,17 @@ public class MainActivity extends AppCompatActivity {
         navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+        navController.navigate(R.id.boardFragment);
+        navController.addOnDestinationChangedListener(((controller, destination, arguments) -> {
+           if (destination.getId() == R.id.boardFragment) {
+               navView.setVisibility(View.GONE);
+               Objects.requireNonNull(getSupportActionBar()).hide();
+           } else {
+               navView.setVisibility(View.VISIBLE);
+               Objects.requireNonNull(getSupportActionBar()).show();
+           }
+        }));
+
     }
 
     @Override
